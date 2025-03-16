@@ -14,7 +14,7 @@
            TextColor="DarkBlue"
            Padding="15" />
 
-        <!-- Bilimsel Tuşlar -->
+        
         <Grid RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="*,*,*,*">
             <Button Text="sin" Grid.Row="0" Grid.Column="0" Clicked="OnScientificFunctionClicked" BackgroundColor="Yellow" TextColor="DarkBlue" />
             <Button Text="cos" Grid.Row="0" Grid.Column="1" Clicked="OnScientificFunctionClicked" BackgroundColor="Yellow" TextColor="DarkBlue"/>

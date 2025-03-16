@@ -4,7 +4,7 @@
              x:Class="MauiApp3.MainPage">
 
     <VerticalStackLayout Spacing="10" Padding="10">
-        <!-- Ekran -->
+        
         <Label x:Name="DisplayLabel"
                Text="0"
                FontSize="32"
@@ -14,7 +14,7 @@
                TextColor="DarkBlue"
                Padding="15" />
 
-        <!-- Tuşlar -->
+        
         <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="*,*,*,*">
             <Button Text="C" Grid.Row="0" Grid.Column="0" Clicked="OnClearClicked" BackgroundColor="Yellow" TextColor="DarkBlue"/>
             <Button Text="±" Grid.Row="0" Grid.Column="1" Clicked="OnToggleSignClicked" BackgroundColor="Yellow" TextColor="DarkBlue"/>
