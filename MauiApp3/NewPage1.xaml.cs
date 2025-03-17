@@ -10,7 +10,19 @@ public partial class NewPage1 : ContentPage
 		InitializeComponent();
 	}
 
-    
+    private double Calculate(string input)
+    {
+        try
+        {
+            
+            return Convert.ToDouble(input);
+        }
+        catch (FormatException)
+        {
+            
+            return 0;
+        }
+    }
 
     private void OnScientificFunctionClicked(object sender, EventArgs e)
     {
@@ -41,10 +53,7 @@ public partial class NewPage1 : ContentPage
         };
     }
 
-    private void OnBracketClicked(object sender, EventArgs e)
-    {
-        
-    }
+    
 
     private void OnClearClicked(object sender, EventArgs e)
     {
@@ -94,15 +103,11 @@ public partial class NewPage1 : ContentPage
         }
         catch (DivideByZeroException)
         {
-            DisplayLabel.Text = "En büyük FENER( 0'a bölme hatası!!)";
+            DisplayLabel.Text = "0'a bölme hatası!!";
         }
     }
 
-    private void OnDecimalClicked(object sender, EventArgs e)
-    {
-        if (!DisplayLabel.Text.Contains("."))
-            DisplayLabel.Text += ".";
-    }
+    
 
     private void OnToggleSignClicked(object sender, EventArgs e)
     {

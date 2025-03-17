@@ -10,6 +10,19 @@
         {
             InitializeComponent();
         }
+        private double Calculate(string input)
+        {
+            try
+            {
+                
+                return Convert.ToDouble(input);
+            }
+            catch (FormatException)
+            {
+                
+                return 0;
+            }
+        }
 
         private void OnNumberClicked(object sender, EventArgs e)
         {
@@ -52,7 +65,7 @@
             }
             catch (DivideByZeroException)
             {
-                DisplayLabel.Text = "En büyük FENER( 0'a bölme hatası!!)";
+                DisplayLabel.Text = "0'a bölme hatası!!";
             }
         }
 
@@ -64,11 +77,7 @@
             DisplayLabel.Text = "0";
         }
 
-        private void OnDecimalClicked(object sender, EventArgs e)
-        {
-            if (!DisplayLabel.Text.Contains("."))
-                DisplayLabel.Text += ".";
-        }
+        
 
         private void OnToggleSignClicked(object sender, EventArgs e)
         {
